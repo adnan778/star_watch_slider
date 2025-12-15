@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAR WATCH | 404 Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Dots -->
+    <div class="navigation-dots">
+      <div class="dot active" data-section="1"></div>
+      <div class="dot" data-section="2"></div>
+      <div class="dot" data-section="3"></div>
+      <div class="dot" data-section="4"></div>
+      <div class="dot" data-section="5"></div>
+      <div class="dot" data-section="6"></div>
+      <div class="dot" data-section="7"></div>
+      <div class="dot" data-section="8"></div>
+      <div class="dot" data-section="9"></div>
+      <div class="dot" data-section="10"></div>
+    </div>
+
+    <!-- Section 1: Team 404 Found Intro -->
+    <section id="section1" class="section">
+      <div id="threejs-container"></div>
+      <div class="content-overlay container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="slide-in" style="animation-delay: 0.3s">
+            <div class="mb-8">
+              <div class="inline-block px-6 py-2 rounded-lg mb-6">
+                <span class="text-sm font-medium">PRESENTING</span>
+              </div>
+              <h1 class="text-6xl md:text-8xl luxury-font mb-6">
+                <span class="text-gray-600">STAR WATCH</span>
+                <span>Geneve</span>
+              </h1>
+              <p class="text-3xl mb-8 luxury-font">
+                By Team <span class="text-red-600">404 Found</span>
+              </p>
+              <p class="text-xl text-gray-300 mb-10 max-w-xl leading-relaxed">
+                Redefining luxury e-commerce through immersive 3D experiences.
+                Where time meets technology in perfect harmony.
+              </p>
+              <div
+                class="typing-text text-2xl gold-gradient luxury-font mb-12"
+                style="width: 100%"
+              >
+                Beyond Time. Beyond Imagination.
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex justify-center items-center">
+            <!-- Floating border animations -->
+            <div
+              class="absolute -top-10 -left-10 w-32 h-32 rounded-full border border-amber-300 opacity-20 rotate-3d hidden md:block"
+            ></div>
+            <div
+              class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full border border-amber-300 opacity-20 rotate-3d hidden md:block"
+              style="animation-direction: reverse"
+            ></div>
+
+            <!-- Watch Container -->
+            <div class="relative watch-face float-animation">
+              <!-- Watch case with shine effect -->
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-br from-slate-50 via-white to-slate-100 shadow-2xl"
+              ></div>
+
+              <!-- Watch bezel -->
+              <div
+                class="absolute inset-4 rounded-full border-2 border-amber-200 opacity-50"
+              ></div>
+
+              <!-- Watch markers circle -->
+              <div class="absolute inset-8 rounded-full">
+                <!-- Hour markers (12 positions) -->
+                <div
+                  class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-6 bg-amber-500"
+                ></div>
+                <div
+                  class="absolute top-1/4 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-1 h-4 bg-amber-400"
+                ></div>
+                <div
+                  class="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-1 h-6 bg-amber-500"
+                ></div>
+                <div
+                  class="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 w-1 h-4 bg-amber-400"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-1 h-6 bg-amber-500"
+                ></div>
+                <div
+                  class="absolute bottom-1/4 left-1/4 transform -translate-x-1/2 translate-y-1/2 w-1 h-4 bg-amber-400"
+                ></div>
+                <div
+                  class="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-6 bg-amber-500"
+                ></div>
+                <div
+                  class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-1 h-4 bg-amber-400"
+                ></div>
+
+                <!-- Additional minute markers -->
+                <div
+                  class="absolute top-1/12 right-1/3 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute top-1/3 right-1/12 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute bottom-1/3 right-1/12 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute bottom-1/12 right-1/3 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute bottom-1/12 left-1/3 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute bottom-1/3 left-1/12 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute top-1/3 left-1/12 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+                <div
+                  class="absolute top-1/12 left-1/3 transform w-0.5 h-3 bg-amber-300"
+                ></div>
+              </div>
+
+              <!-- Watch center circle -->
+              <div
+                class="absolute inset-16 rounded-full bg-gradient-to-b from-slate-800 to-slate-900 flex items-center justify-center"
+              >
+                <!-- Sub-dial -->
+                <div
+                  class="w-32 h-32 rounded-full border border-amber-400 opacity-30"
+                ></div>
+              </div>
+
+              <!-- Watch hands container -->
+              <div class="absolute inset-0 watch-hands">
+                <!-- Hour hand -->
+                <div
+                  class="absolute top-1/2 left-1/2 hour-hand"
+                  id="hourHand"
+                  style="
+                    width: 8px;
+                    height: 60px;
+                    background: linear-gradient(to top, #334155, #64748b);
+                    transform-origin: bottom center;
+                    border-radius: 4px 4px 0 0;
+                  "
+                ></div>
+
+                <!-- Minute hand -->
+                <div
+                  class="absolute top-1/2 left-1/2 minute-hand"
+                  id="minuteHand"
+                  style="
+                    width: 6px;
+                    height: 90px;
+                    background: linear-gradient(to top, #475569, #94a3b8);
+                    transform-origin: bottom center;
+                    border-radius: 3px 3px 0 0;
+                  "
+                ></div>
+
+                <!-- Second hand -->
+                <div
+                  class="absolute top-1/2 left-1/2 second-hand"
+                  id="secondHand"
+                  style="
+                    width: 2px;
+                    height: 100px;
+                    background: linear-gradient(to top, #dc2626, #ef4444);
+                    transform-origin: bottom center;
+                  "
+                ></div>
+
+                <!-- Center pin -->
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-amber-500 z-10"
+                ></div>
+              </div>
+
+              <!-- Watch face shine effect -->
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-30"
+              ></div>
+
+              <!-- Brand name -->
+              <div
+                class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-amber-600 luxury-font text-sm font-bold"
+              >
+                STAR WATCH
+              </div>
+
+              <!-- Watch numbers -->
+              <div
+                class="absolute top-4 left-1/2 transform -translate-x-1/2 text-amber-700 text-xs font-bold"
+              >
+                12
+              </div>
+              <div
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-amber-700 text-xs font-bold"
+              >
+                3
+              </div>
+              <div
+                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-amber-700 text-xs font-bold"
+              >
+                6
+              </div>
+              <div
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-amber-700 text-xs font-bold"
+              >
+                9
+              </div>
+            </div>
+
+            <!-- Floating particles -->
+            <div
+              class="star"
+              style="top: 20%; left: 30%; animation-delay: 0s"
+            ></div>
+            <div
+              class="star"
+              style="top: 40%; left: 80%; animation-delay: 1s"
+            ></div>
+            <div
+              class="star"
+              style="top: 70%; left: 20%; animation-delay: 2s"
+            ></div>
+            <div
+              class="star"
+              style="top: 85%; left: 60%; animation-delay: 3s"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Team Members -->
+    <section id="section2" class="section">
+      <div class="container mx-auto">
+        <h2 class="section-title text-5xl luxury-font mb-20 slide-in">
+          <span class="text-gray-500">Software Developers</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Member 1 -->
+          <div
+            class="group cursor-pointer relative rounded-3xl bg-transparent p-2 shadow-2xl transition-all duration-500 hover:scale-101"
+          >
+            <!-- Glow border -->
+
+            <div class="relative bg-gray-900 rounded-3xl p-8">
+              <!-- Profile Image -->
+              <div class="relative mx-auto w-36 h-36 mb-8">
+                <div
+                  class="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur"
+                ></div>
+                <img
+                  src="assets/adnan.jpg"
+                  alt="Adnan Hasan"
+                  class="w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-xl"
+                />
+                <div
+                  class="absolute -bottom-2 -right-2 w-10 h-10 bg-gray-700 from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fas fa-crown text-white text-xs"></i>
+                </div>
+              </div>
+
+              <!-- Name -->
+              <h3
+                class="text-2xl font-bold text-center mb-2 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent"
+              >
+                Adnan Hasan
+              </h3>
+
+              <!-- Role -->
+              <p class="text-center text-gray-400 mb-4 font-medium">
+                <i class="fas fa-code mr-2 text-blue-400"></i>
+                Leader & Backend Developer
+              </p>
+
+              <!-- Description -->
+              <p class="text-gray-300 text-center mb-6 text-sm leading-relaxed">
+                Expert in web technologies, Frontend, and Backend Data
+                Management with 4+ years of Study Experience.
+              </p>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs font-medium"
+                  >React.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-xs font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-xs font-medium"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-xs font-medium"
+                  >Prisma</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Member 1 -->
+          <div
+            class="group cursor-pointer relative rounded-3xl bg-transparent p-2 shadow-2xl transition-all duration-500 hover:scale-101"
+          >
+            <!-- Glow border -->
+
+            <div class="relative bg-gray-900 rounded-3xl p-8">
+              <!-- Profile Image -->
+              <div class="relative mx-auto w-36 h-36 mb-8">
+                <div
+                  class="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur"
+                ></div>
+                <img
+                  src="assets/adnan.jpg"
+                  alt="Adnan Hasan"
+                  class="w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-xl"
+                />
+                <div
+                  class="absolute -bottom-2 -right-2 w-10 h-10 bg-gray-700 from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fas fa-crown text-white text-xs"></i>
+                </div>
+              </div>
+
+              <!-- Name -->
+              <h3
+                class="text-2xl font-bold text-center mb-2 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent"
+              >
+                Adnan Hasan
+              </h3>
+
+              <!-- Role -->
+              <p class="text-center text-gray-400 mb-4 font-medium">
+                <i class="fas fa-code mr-2 text-blue-400"></i>
+                Leader & Backend Developer
+              </p>
+
+              <!-- Description -->
+              <p class="text-gray-300 text-center mb-6 text-sm leading-relaxed">
+                Expert in web technologies, Frontend, and Backend Data
+                Management with 4+ years of Study Experience.
+              </p>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs font-medium"
+                  >React.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-xs font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-xs font-medium"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-xs font-medium"
+                  >Prisma</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Member 1 -->
+          <div
+            class="group cursor-pointer relative rounded-3xl bg-transparent p-2 shadow-2xl transition-all duration-500 hover:scale-101"
+          >
+            <!-- Glow border -->
+
+            <div class="relative bg-gray-900 rounded-3xl p-8">
+              <!-- Profile Image -->
+              <div class="relative mx-auto w-36 h-36 mb-8">
+                <div
+                  class="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur"
+                ></div>
+                <img
+                  src="assets/adnan.jpg"
+                  alt="Adnan Hasan"
+                  class="w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-xl"
+                />
+                <div
+                  class="absolute -bottom-2 -right-2 w-10 h-10 bg-gray-700 from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fas fa-crown text-white text-xs"></i>
+                </div>
+              </div>
+
+              <!-- Name -->
+              <h3
+                class="text-2xl font-bold text-center mb-2 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent"
+              >
+                Adnan Hasan
+              </h3>
+
+              <!-- Role -->
+              <p class="text-center text-gray-400 mb-4 font-medium">
+                <i class="fas fa-code mr-2 text-blue-400"></i>
+                Leader & Backend Developer
+              </p>
+
+              <!-- Description -->
+              <p class="text-gray-300 text-center mb-6 text-sm leading-relaxed">
+                Expert in web technologies, Frontend, and Backend Data
+                Management with 4+ years of Study Experience.
+              </p>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs font-medium"
+                  >React.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-xs font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-xs font-medium"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-xs font-medium"
+                  >Prisma</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Member 1 -->
+          <div
+            class="group cursor-pointer relative rounded-3xl bg-transparent p-2 shadow-2xl transition-all duration-500 hover:scale-101"
+          >
+            <!-- Glow border -->
+
+            <div class="relative bg-gray-900 rounded-3xl p-8">
+              <!-- Profile Image -->
+              <div class="relative mx-auto w-36 h-36 mb-8">
+                <div
+                  class="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur"
+                ></div>
+                <img
+                  src="assets/adnan.jpg"
+                  alt="Adnan Hasan"
+                  class="w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-xl"
+                />
+                <div
+                  class="absolute -bottom-2 -right-2 w-10 h-10 bg-gray-700 from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fas fa-crown text-white text-xs"></i>
+                </div>
+              </div>
+
+              <!-- Name -->
+              <h3
+                class="text-2xl font-bold text-center mb-2 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent"
+              >
+                Adnan Hasan
+              </h3>
+
+              <!-- Role -->
+              <p class="text-center text-gray-400 mb-4 font-medium">
+                <i class="fas fa-code mr-2 text-blue-400"></i>
+                Leader & Backend Developer
+              </p>
+
+              <!-- Description -->
+              <p class="text-gray-300 text-center mb-6 text-sm leading-relaxed">
+                Expert in web technologies, Frontend, and Backend Data
+                Management with 4+ years of Study Experience.
+              </p>
+
+              <!-- Skills -->
+              <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs font-medium"
+                  >React.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-xs font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-xs font-medium"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-xs font-medium"
+                  >Prisma</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Technology Stack -->
+    <section id="section3" class="section">
+      <div class="container mx-auto">
+        <h2 class="section-title text-5xl luxury-font mb-20 slide-in">
+          <span class="gold-gradient">Tech Architecture</span>
+        </h2>
+
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
+        >
+          <!-- PHP -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-900/20 to-purple-700/20 border border-purple-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-purple-900/30 group-hover:to-purple-700/30"
+                >
+                  <i class="fab fa-php text-3xl text-purple-500"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">PHP</h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  Backend Language
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Laravel -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-red-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-red-900/20 to-red-700/20 border border-red-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-red-900/30 group-hover:to-red-700/30"
+                >
+                  <i class="fab fa-laravel text-3xl text-red-500"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  Laravel
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  PHP Framework
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-900/20 to-blue-700/20 border border-cyan-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-cyan-900/30 group-hover:to-blue-700/30"
+                >
+                  <i class="fab fa-css3-alt text-3xl text-cyan-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  Tailwind CSS
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  CSS Framework
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-900/20 to-yellow-700/20 border border-yellow-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-yellow-900/30 group-hover:to-yellow-700/30"
+                >
+                  <i class="fab fa-js-square text-3xl text-yellow-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  JavaScript
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  Frontend Language
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SweetAlert2 -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-pink-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-900/20 to-purple-700/20 border border-pink-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-pink-900/30 group-hover:to-purple-700/30"
+                >
+                  <i
+                    class="fas fa-exclamation-circle text-3xl text-pink-400"
+                  ></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  SweetAlert2
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  Alert Dialogs
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SMTP Mail -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900/20 to-blue-700/20 border border-blue-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-blue-900/30 group-hover:to-blue-700/30"
+                >
+                  <i class="fas fa-envelope text-3xl text-blue-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  SMTP Mail
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  Email Service
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MySQL Database -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900/20 to-cyan-700/20 border border-blue-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-blue-900/30 group-hover:to-cyan-700/30"
+                >
+                  <i class="fas fa-database text-3xl text-blue-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">MySQL</h4>
+                <p class="text-gray-300 text-center text-sm mt-1">Database</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vite -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-900/20 to-pink-700/20 border border-purple-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-purple-900/30 group-hover:to-pink-700/30"
+                >
+                  <i class="fas fa-bolt text-3xl text-purple-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">Vite</h4>
+                <p class="text-gray-300 text-center text-sm mt-1">Build Tool</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Font Awesome -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900/20 to-blue-700/20 border border-blue-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-blue-900/30 group-hover:to-blue-700/30"
+                >
+                  <i class="fas fa-icons text-3xl text-blue-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  Font Awesome
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  Icon Library
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart.js -->
+          <div class="group relative">
+            <div
+              class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-lg hover:shadow-pink-500/20 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-900/20 to-red-700/20 border border-pink-500/30 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-pink-900/30 group-hover:to-red-700/30"
+                >
+                  <i class="fas fa-chart-line text-3xl text-pink-400"></i>
+                </div>
+                <h4 class="text-lg font-bold text-center text-white">
+                  Chart.js
+                </h4>
+                <p class="text-gray-300 text-center text-sm mt-1">
+                  Data Visualization
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 glass-morphism rounded-3xl p-8 slide-in">
+          <h3 class="text-2xl luxury-font mb-6 gold-gradient text-center">
+            Advanced Tech Stack
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center p-6">
+              <div class="text-4xl mb-4">
+                <i class="fas fa-bolt gold-gradient"></i>
+              </div>
+              <h4 class="text-xl font-semibold mb-2">
+                Real-time order tracking
+              </h4>
+              <p class="text-gray-400">use Advanced js and php</p>
+            </div>
+            <div class="text-center p-6">
+              <div class="text-4xl mb-4">
+                <i class="fas fa-shield-alt silver-gradient"></i>
+              </div>
+              <h4 class="text-xl font-semibold mb-2">
+                Military-Grade Security
+              </h4>
+              <p class="text-gray-400">Our own authentication System</p>
+            </div>
+            <div class="text-center p-6">
+              <div class="text-4xl mb-4">
+                <i class="fa-solid fa-address-book text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-semibold mb-2"></h4>
+              <p class="text-gray-400">24/7 customer support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Core Features -->
+    <section id="section4" class="section py-16 md:py-20">
+      <div class="container mx-auto px-4">
+        <h2
+          class="section-title text-4xl md:text-5xl font-bold mb-12 md:mb-16 text-center slide-in"
+        >
+          <span class="text-gray-700 dark:text-gray-300">Core Features</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <!-- Feature 1 -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-shield-alt text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Advanced Authentication System
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Robust authentication with secure login, encrypted credentials,
+                and role-based access control for maximum data protection.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-shopping-bag text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Luxury Watch Sales Platform
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Premium watch collections with seamless shopping experience,
+                secure payment gateway, and efficient order management.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 0.6s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-user-cog text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Dynamic Admin Panel
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Comprehensive admin dashboard with real-time controls to manage
+                products, users, orders, and subscriptions efficiently.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 0.8s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-headset text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                24/7 Customer Support
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Round-the-clock customer service with instant assistance, order
+                tracking, and premium support for all users.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 5 - Premium User Experience -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 1s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-star text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Premium User Experience
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Enhanced interface with personalized recommendations, faster
+                loading times, and exclusive features for premium members.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 6 - Quick Luxury Watch Sale -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 1.2s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-bolt text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Express Luxury Watch Sales
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Fast-track selling process for luxury watches with minimal wait
+                time, instant valuation, and quick transaction completion.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 7 - Luxury Customization -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 1.4s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-palette text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Luxury Customization Studio
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Complete watch customization with premium materials, engravings,
+                and bespoke designs for a truly personal luxury piece.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 8 - Premium Subscription -->
+          <div
+            class="flex items-start slide-in group"
+            style="animation-delay: 1.6s"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 border border-gray-300 dark:border-gray-700 flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-gray-200 group-hover:to-gray-300 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 transition-all duration-300"
+            >
+              <i
+                class="fas fa-crown text-xl text-gray-700 dark:text-gray-300"
+              ></i>
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >
+                Premium Membership
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Exclusive access to limited edition watches, VIP events,
+                priority services, and special discounts for premium
+                subscribers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Premium Features -->
+    <section id="section5" class="section">
+      <div class="container mx-auto">
+        <h2
+          class="section-title text-5xl luxury-font mb-20 slide-in text-gray-200"
+        >
+          Premium Features
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Premium 1 -->
+          <div
+            class="holographic-card rounded-3xl p-8 slide-in bg-gray-900/70"
+            style="animation-delay: 0.2s"
+          >
+            <div class="text-5xl mb-6 text-center text-gray-300">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 text-center text-gray-100">
+              Premium User Experience
+            </h3>
+            <p class="text-gray-400 text-center text-sm">
+              A refined and seamless user experience designed exclusively for
+              premium members, ensuring elegance, speed, and comfort.
+            </p>
+          </div>
+
+          <!-- Premium 2 -->
+          <div
+            class="holographic-card rounded-3xl p-8 slide-in bg-gray-900/70"
+            style="animation-delay: 0.4s"
+          >
+            <div class="text-5xl mb-6 text-center text-gray-300">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 text-center text-gray-100">
+              Low-Wait Luxury Purchases
+            </h3>
+            <p class="text-gray-400 text-center text-sm">
+              Priority access to luxury watch sales with minimal waiting time,
+              faster order processing, and exclusive availability.
+            </p>
+          </div>
+
+          <!-- Premium 3 -->
+          <div
+            class="holographic-card rounded-3xl p-8 slide-in bg-gray-900/70"
+            style="animation-delay: 0.6s"
+          >
+            <div class="text-5xl mb-6 text-center text-gray-300">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 text-center text-gray-100">
+              Luxury Watch Customization
+            </h3>
+            <p class="text-gray-400 text-center text-sm">
+              Personalize luxury watches with custom straps, dials, finishes,
+              and materials to match your individual style.
+            </p>
+          </div>
+
+          <!-- Premium 4 -->
+          <div
+            class="holographic-card rounded-3xl p-8 slide-in bg-gray-900/70"
+            style="animation-delay: 0.8s"
+          >
+            <div class="text-5xl mb-6 text-center text-gray-300">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 text-center text-gray-100">
+              Priority Support & Services
+            </h3>
+            <p class="text-gray-400 text-center text-sm">
+              Dedicated premium support with faster responses, exclusive
+              assistance, and personalized service for members.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Premium Banner -->
+        <div class="mt-16 slide-in" style="animation-delay: 1s">
+          <div class="rounded-3xl border border-gray-700/50 p-1">
+            <div class="bg-gray-900 rounded-3xl p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div>
+                  <h3 class="text-2xl luxury-font mb-4 text-gray-100">
+                    Exclusive Premium Benefits
+                  </h3>
+                  <p class="text-gray-400">
+                    Premium members enjoy early product access, faster
+                    deliveries, personalized customization, and a truly elite
+                    watch-buying experience.
+                  </p>
+                </div>
+
+                <div class="lg:col-span-2">
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center p-4">
+                      <div class="text-3xl mb-2 text-gray-300">
+                        <i class="fas fa-crown"></i>
+                      </div>
+                      <p class="text-sm text-gray-400">Exclusive Access</p>
+                    </div>
+
+                    <div class="text-center p-4">
+                      <div class="text-3xl mb-2 text-gray-300">
+                        <i class="fas fa-clock"></i>
+                      </div>
+                      <p class="text-sm text-gray-400">Priority Processing</p>
+                    </div>
+
+                    <div class="text-center p-4">
+                      <div class="text-3xl mb-2 text-gray-300">
+                        <i class="fas fa-tools"></i>
+                      </div>
+                      <p class="text-sm text-gray-400">Custom Orders</p>
+                    </div>
+
+                    <div class="text-center p-4">
+                      <div class="text-3xl mb-2 text-gray-300">
+                        <i class="fas fa-headset"></i>
+                      </div>
+                      <p class="text-sm text-gray-400">Dedicated Support</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Section 7: Backend Logic -->
+    <section id="section7" class="section">
+      <div class="container mx-auto">
+        <h2 class="section-title text-5xl luxury-font mb-20 slide-in">
+          <span class="gold-gradient">Backend Architecture</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="slide-in" style="animation-delay: 0.3s">
+            <div class="holographic-card rounded-3xl p-8">
+              <h3 class="text-2xl luxury-font mb-6 gold-gradient">
+                Microservices Architecture
+              </h3>
+
+              <div class="space-y-6">
+                <!-- Service 1 -->
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-cube text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">
+                      3D Rendering Service
+                    </h4>
+                    <p class="text-gray-400 text-sm">
+                      Real-time WebGL processing and optimization
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-shopping-cart text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">
+                      E-commerce Service
+                    </h4>
+                    <p class="text-gray-400 text-sm">
+                      Order processing, inventory, and payment gateway
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-user-lock text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">Auth Service</h4>
+                    <p class="text-gray-400 text-sm">
+                      JWT authentication, OAuth, and session management
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-chart-line text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">
+                      Analytics Service
+                    </h4>
+                    <p class="text-gray-400 text-sm">
+                      User behavior tracking and personalization engine
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-in" style="animation-delay: 0.6s">
+            <div class="glass-morphism rounded-3xl p-8">
+              <h3 class="text-2xl luxury-font mb-6 silver-gradient">
+                Database Design
+              </h3>
+
+              <div class="space-y-4">
+                <div
+                  class="flex justify-between items-center p-4 rounded-xl bg-gray-900"
+                >
+                  <span class="text-gray-300">MongoDB Collections</span>
+                  <span class="text-gold-500 font-semibold">12</span>
+                </div>
+
+                <div
+                  class="flex justify-between items-center p-4 rounded-xl bg-gray-900"
+                >
+                  <span class="text-gray-300">Redis Cache Instances</span>
+                  <span class="text-gold-500 font-semibold">3</span>
+                </div>
+
+                <div
+                  class="flex justify-between items-center p-4 rounded-xl bg-gray-900"
+                >
+                  <span class="text-gray-300">API Endpoints</span>
+                  <span class="text-gold-500 font-semibold">47</span>
+                </div>
+
+                <div
+                  class="flex justify-between items-center p-4 rounded-xl bg-gray-900"
+                >
+                  <span class="text-gray-300">Response Time</span>
+                  <span class="text-gold-500 font-semibold">&lt; 200ms</span>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-semibold mb-4 silver-gradient">
+                  Security Protocols
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
+                    >AES-256</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
+                    >TLS 1.3</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
+                    >CSP</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
+                    >JWT</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
+                    >OAuth 2.0</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Authentication System -->
+    <section id="section8" class="section">
+      <div class="container mx-auto">
+        <h2 class="section-title text-5xl luxury-font mb-20 slide-in">
+          <span class="gold-gradient">Authentication Flow</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <!-- Step 1 -->
+          <div class="text-center slide-in" style="animation-delay: 0.2s">
+            <div
+              class="w-20 h-20 rounded-full gradient-border mx-auto mb-6 flex items-center justify-center"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center"
+              >
+                <span class="text-2xl luxury-font gold-gradient">01</span>
+              </div>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 gold-gradient">
+              Multi-Factor Setup
+            </h3>
+            <p class="text-gray-300">
+              Email + Password + Biometric verification for initial account
+              creation
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center slide-in" style="animation-delay: 0.4s">
+            <div
+              class="w-20 h-20 rounded-full gradient-border mx-auto mb-6 flex items-center justify-center"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center"
+              >
+                <span class="text-2xl luxury-font gold-gradient">02</span>
+              </div>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 gold-gradient">
+              Blockchain Identity
+            </h3>
+            <p class="text-gray-300">
+              Wallet connection for digital certificate and ownership
+              verification
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center slide-in" style="animation-delay: 0.6s">
+            <div
+              class="w-20 h-20 rounded-full gradient-border mx-auto mb-6 flex items-center justify-center"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center"
+              >
+                <span class="text-2xl luxury-font gold-gradient">03</span>
+              </div>
+            </div>
+            <h3 class="text-xl luxury-font mb-4 gold-gradient">
+              Continuous Auth
+            </h3>
+            <p class="text-gray-300">
+              Behavioral biometrics and session monitoring for ongoing security
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="glass-morphism rounded-3xl p-8 slide-in"
+          style="animation-delay: 0.8s"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl luxury-font mb-6 gold-gradient">
+                Security Features
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-gold-500 mr-3"></i>
+                  <span class="text-gray-300"
+                    >Zero-knowledge password proof</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-gold-500 mr-3"></i>
+                  <span class="text-gray-300">Device fingerprinting</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-gold-500 mr-3"></i>
+                  <span class="text-gray-300">IP anomaly detection</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-gold-500 mr-3"></i>
+                  <span class="text-gray-300">Behavioral biometrics</span>
+                </li>
+              </ul>
+            </div>
+            <div class="text-center">
+              <div class="inline-block p-6 rounded-2xl bg-gray-900">
+                <div class="text-6xl luxury-font gold-gradient mb-4">99.9%</div>
+                <p class="text-gray-300">Security Uptime</p>
+                <p class="text-gray-400 text-sm mt-2">
+                  No security breaches since inception
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Logic Building -->
+    <section id="section9" class="section">
+      <div class="container mx-auto">
+        <h2 class="section-title text-5xl luxury-font mb-20 slide-in">
+          <span class="gold-gradient">Intelligent Systems</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="slide-in" style="animation-delay: 0.3s">
+            <div class="holographic-card rounded-3xl p-8 h-full">
+              <h3 class="text-2xl luxury-font mb-6 gold-gradient">
+                AI Recommendation Engine
+              </h3>
+
+              <div class="space-y-6">
+                <div>
+                  <h4 class="text-lg font-semibold mb-2 silver-gradient">
+                    Style Analysis
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Computer vision analyzes user's existing watch collection
+                    and style preferences to recommend perfect matches.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-semibold mb-2 silver-gradient">
+                    Market Intelligence
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Real-time analysis of luxury watch market trends, investment
+                    potential, and rarity scoring.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-semibold mb-2 silver-gradient">
+                    Personalized Pricing
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Dynamic pricing algorithms that consider market demand,
+                    rarity, and user's purchase history.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-in" style="animation-delay: 0.6s">
+            <div class="glass-morphism rounded-3xl p-8 h-full">
+              <h3 class="text-2xl luxury-font mb-6 silver-gradient">
+                Business Logic Modules
+              </h3>
+
+              <div class="space-y-6">
+                <!-- Module 1 -->
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <i class="fas fa-sync-alt text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">
+                      Inventory Synchronization
+                    </h4>
+                    <p class="text-gray-400 text-sm">
+                      Real-time sync across multiple luxury suppliers and
+                      boutiques
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <i class="fas fa-handshake text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">
+                      Escrow Management
+                    </h4>
+                    <p class="text-gray-400 text-sm">
+                      Secure payment escrow for high-value transactions
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <i class="fas fa-chart-bar text-gold-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-1">Analytics Engine</h4>
+                    <p class="text-gray-400 text-sm">
+                      User behavior analysis and conversion optimization
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 slide-in" style="animation-delay: 0.9s">
+          <div class="gradient-border rounded-3xl p-1">
+            <div class="bg-gray-900 rounded-3xl p-8">
+              <div
+                class="flex flex-col lg:flex-row items-center justify-between"
+              >
+                <div>
+                  <h3 class="text-2xl luxury-font mb-4 gold-gradient">
+                    Performance Metrics
+                  </h3>
+                  <p class="text-gray-300 max-w-xl">
+                    Our intelligent systems process over 10,000 transactions
+                    daily with 99.99% accuracy and sub-second response times.
+                  </p>
+                </div>
+                <div class="mt-6 lg:mt-0">
+                  <div class="flex space-x-6">
+                    <div class="text-center">
+                      <div class="text-3xl luxury-font gold-gradient mb-2">
+                        0.2s
+                      </div>
+                      <p class="text-gray-400 text-sm">Avg. Response Time</p>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-3xl luxury-font gold-gradient mb-2">
+                        99.99%
+                      </div>
+                      <p class="text-gray-400 text-sm">System Uptime</p>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-3xl luxury-font gold-gradient mb-2">
+                        10K+
+                      </div>
+                      <p class="text-gray-400 text-sm">Daily Transactions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Subscription -->
+    <section id="section10" class="section">
+      <div class="container mx-auto">
+        <h2 class="section-title text-5xl luxury-font mb-20 slide-in">
+          <span class="gold-gradient">Exclusive Membership</span>
+        </h2>
+
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="gradient-border rounded-3xl p-1 slide-in"
+            style="animation-delay: 0.3s"
+          >
+            <div class="bg-gray-900 rounded-3xl p-12">
+              <div class="text-center mb-12">
+                <h3 class="text-3xl luxury-font mb-6 gold-gradient">
+                  Become a Star Watch Member
+                </h3>
+                <p class="text-gray-300 text-xl">
+                  Join our exclusive community of watch enthusiasts and
+                  collectors
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Tier 1 -->
+                <div class="glass-morphism rounded-2xl p-8 text-center">
+                  <h4 class="text-xl luxury-font mb-4 silver-gradient">
+                    Essential
+                  </h4>
+                  <div class="text-4xl luxury-font mb-6 gold-gradient">
+                    $99<span class="text-lg text-gray-400">/month</span>
+                  </div>
+                  <ul class="space-y-3 mb-8">
+                    <li class="text-gray-300 text-sm">
+                      Basic 3D Viewer Access
+                    </li>
+                    <li class="text-gray-300 text-sm">Standard Support</li>
+                    <li class="text-gray-300 text-sm">Market Updates</li>
+                  </ul>
+                  <button
+                    class="w-full py-3 glass-morphism rounded-full font-semibold"
+                  >
+                    <span class="silver-gradient">Subscribe</span>
+                  </button>
+                </div>
+
+                <!-- Tier 2 (Featured) -->
+                <div class="gradient-border rounded-2xl p-1">
+                  <div class="bg-gray-900 rounded-2xl p-8 text-center h-full">
+                    <div
+                      class="inline-block px-4 py-1 rounded-full bg-gold-500 text-gray-900 text-sm font-semibold mb-4"
+                    >
+                      MOST POPULAR
+                    </div>
+                    <h4 class="text-xl luxury-font mb-4 gold-gradient">
+                      Premium
+                    </h4>
+                    <div class="text-5xl luxury-font mb-6 gold-gradient">
+                      $299<span class="text-lg text-gray-400">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                      <li class="text-gray-300 text-sm">
+                        Full 3D + AR Experience
+                      </li>
+                      <li class="text-gray-300 text-sm">Priority Support</li>
+                      <li class="text-gray-300 text-sm">AI Personal Stylist</li>
+                      <li class="text-gray-300 text-sm">
+                        Early Access to Drops
+                      </li>
+                    </ul>
+                    <button
+                      class="w-full py-3 gradient-border rounded-full font-semibold"
+                    >
+                      <span class="gold-gradient">Subscribe Now</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="glass-morphism rounded-2xl p-8 text-center">
+                  <h4 class="text-xl luxury-font mb-4 silver-gradient">
+                    Concierge
+                  </h4>
+                  <div class="text-4xl luxury-font mb-6 gold-gradient">
+                    $999<span class="text-lg text-gray-400">/month</span>
+                  </div>
+                  <ul class="space-y-3 mb-8">
+                    <li class="text-gray-300 text-sm">All Premium Features</li>
+                    <li class="text-gray-300 text-sm">
+                      24/7 Personal Concierge
+                    </li>
+                    <li class="text-gray-300 text-sm">
+                      Exclusive Watch Events
+                    </li>
+                    <li class="text-gray-300 text-sm">Custom Watch Design</li>
+                  </ul>
+                  <button
+                    class="w-full py-3 glass-morphism rounded-full font-semibold"
+                  >
+                    <span class="silver-gradient">Contact Sales</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <p class="text-gray-400 mb-8">
+                  Join 2,500+ luxury watch collectors already experiencing Star
+                  Watch
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="flex-1 px-6 py-4 glass-morphism rounded-full focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  />
+                  <button
+                    class="px-8 py-4 gradient-border rounded-full font-semibold hover:scale-105 transition-transform"
+                  >
+                    <span class="gold-gradient">Get Started</span>
+                  </button>
+                </div>
+                <p class="text-gray-500 text-sm mt-4">
+                  By subscribing, you agree to our Terms and Privacy Policy
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-800">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full gradient-border flex items-center justify-center"
+              >
+                <i class="fas fa-crown gold-gradient"></i>
+              </div>
+              <h2 class="text-2xl luxury-font gold-gradient">STAR WATCH</h2>
+            </div>
+            <p class="text-gray-400">
+              © 2024 Team 404 Found. All rights reserved.
+            </p>
+          </div>
+
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-gold-500 transition">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gold-500 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gold-500 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gold-500 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Three.js Scene
+      function initThreeJS() {
+        const container = document.getElementById("threejs-container");
+        if (!container) return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        );
+        const renderer = new THREE.WebGLRenderer({
+          alpha: true,
+          antialias: true,
+        });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.appendChild(renderer.domElement);
+
+        // Add stars
+        const starGeometry = new THREE.BufferGeometry();
+        const starCount = 1000;
+        const positions = new Float32Array(starCount * 3);
+
+        for (let i = 0; i < starCount * 3; i += 3) {
+          positions[i] = (Math.random() - 0.5) * 2000;
+          positions[i + 1] = (Math.random() - 0.5) * 2000;
+          positions[i + 2] = (Math.random() - 0.5) * 2000;
+        }
+
+        starGeometry.setAttribute(
+          "position",
+          new THREE.BufferAttribute(positions, 3)
+        );
+
+        const starMaterial = new THREE.PointsMaterial({
+          color: 0xffffff,
+          size: 1,
+          transparent: true,
+        });
+
+        const stars = new THREE.Points(starGeometry, starMaterial);
+        scene.add(stars);
+
+        // Add floating geometric shapes
+        const geometry = new THREE.IcosahedronGeometry(20, 0);
+        const material = new THREE.MeshBasicMaterial({
+          color: 0xd4af37,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.1,
+        });
+
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        camera.position.z = 50;
+
+        // Mouse movement effect
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener("mousemove", (event) => {
+          mouseX = (event.clientX - window.innerWidth / 2) * 0.001;
+          mouseY = (event.clientY - window.innerHeight / 2) * 0.001;
+        });
+
+        // Animation loop
+        function animate() {
+          requestAnimationFrame(animate);
+
+          mesh.rotation.x += 0.002 + mouseY * 0.1;
+          mesh.rotation.y += 0.003 + mouseX * 0.1;
+          stars.rotation.y += 0.0005;
+
+          renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Handle window resize
+        window.addEventListener("resize", () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+      }
+
+      // Navigation Dots
+      function initNavigation() {
+        const dots = document.querySelectorAll(".dot");
+        const sections = document.querySelectorAll("section");
+
+        // Update active dot on scroll
+        window.addEventListener("scroll", () => {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          dots.forEach((dot) => {
+            dot.classList.remove("active");
+            if (dot.dataset.section === current.replace("section", "")) {
+              dot.classList.add("active");
+            }
+          });
+        });
+
+        // Click to scroll
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            const sectionId = `section${dot.dataset.section}`;
+            const section = document.getElementById(sectionId);
+            if (section) {
+              window.scrollTo({
+                top: section.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      }
+
+      // Initialize animations on scroll
+      function initAnimations() {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -100px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("slide-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observe all elements with slide-in class
+        document.querySelectorAll(".slide-in").forEach((el) => {
+          observer.observe(el);
+        });
+      }
+
+      // Create floating particles
+      function createParticles() {
+        const colors = ["#D4AF37", "#FFD700", "#C0C0C0", "#FFFFFF"];
+
+        for (let i = 0; i < 50; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+          particle.style.left = `${Math.random() * 100}vw`;
+          particle.style.top = `${Math.random() * 100}vh`;
+          particle.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          particle.style.opacity = Math.random() * 0.5 + 0.2;
+          particle.style.width = `${Math.random() * 3 + 2}px`;
+          particle.style.height = particle.style.width;
+          particle.style.animation = `float ${
+            Math.random() * 10 + 10
+          }s ease-in-out infinite`;
+          particle.style.animationDelay = `${Math.random() * 5}s`;
+
+          document.body.appendChild(particle);
+        }
+      }
+
+      // Initialize everything when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize Three.js
+        try {
+          initThreeJS();
+        } catch (e) {
+          console.log("Three.js not loaded, continuing without 3D background");
+        }
+
+        // Initialize other features
+        initNavigation();
+        initAnimations();
+        createParticles();
+        animateWatch();
+
+        // Add scroll to section functionality
+        window.scrollToSection = function (sectionNumber) {
+          const section = document.getElementById(`section${sectionNumber}`);
+          if (section) {
+            window.scrollTo({
+              top: section.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        };
+      });
+
+      // Add keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          e.preventDefault();
+          const activeDot = document.querySelector(".dot.active");
+          if (activeDot) {
+            const nextSection = parseInt(activeDot.dataset.section) + 1;
+            if (nextSection <= 10) {
+              window.scrollToSection(nextSection);
+            }
+          }
+        } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          const activeDot = document.querySelector(".dot.active");
+          if (activeDot) {
+            const prevSection = parseInt(activeDot.dataset.section) - 1;
+            if (prevSection >= 1) {
+              window.scrollToSection(prevSection);
+            }
+          }
+        }
+      });
+    </script>
+    <script>
+      // Enhanced watch animation with proper 3D rotation
+      function animateWatch() {
+        const hourHand = document.getElementById("hourHand");
+        const minuteHand = document.getElementById("minuteHand");
+        const secondHand = document.getElementById("secondHand");
+
+        function updateWatchTime() {
+          const now = new Date();
+          const hours = now.getHours();
+          const minutes = now.getMinutes();
+          const seconds = now.getSeconds();
+          const milliseconds = now.getMilliseconds();
+
+          // Calculate precise angles
+          const hourAngle = (hours % 12) * 30 + minutes * 0.5;
+          const minuteAngle = minutes * 6 + seconds * 0.1;
+          const secondAngle = seconds * 6 + milliseconds * 0.006;
+
+          // Apply smooth rotation
+          if (hourHand) {
+            hourHand.style.transform = `translate(-50%, -100%) rotate(${hourAngle}deg)`;
+          }
+          if (minuteHand) {
+            minuteHand.style.transform = `translate(-50%, -100%) rotate(${minuteAngle}deg)`;
+          }
+          if (secondHand) {
+            secondHand.style.transform = `translate(-50%, -100%) rotate(${secondAngle}deg)`;
+          }
+        }
+
+        // Update immediately and then every frame for smoothness
+        updateWatchTime();
+        setInterval(updateWatchTime, 16); // ~60fps
+      }
+
+      // Add 3D hover effect to watch
+      function addWatchHoverEffect() {
+        const watchFace = document.querySelector(".watch-face");
+        if (!watchFace) return;
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetRotationX = 0;
+        let targetRotationY = 0;
+        let currentRotationX = 0;
+        let currentRotationY = 0;
+
+        watchFace.addEventListener("mousemove", (e) => {
+          const rect = watchFace.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+
+          mouseX = e.clientX - centerX;
+          mouseY = e.clientY - centerY;
+
+          targetRotationY = (mouseX / rect.width) * 20;
+          targetRotationX = -(mouseY / rect.height) * 20;
+        });
+
+        watchFace.addEventListener("mouseleave", () => {
+          targetRotationX = 0;
+          targetRotationY = 0;
+        });
+
+        // Smooth animation loop
+        function animateWatchRotation() {
+          // Smooth interpolation
+          currentRotationX += (targetRotationX - currentRotationX) * 0.1;
+          currentRotationY += (targetRotationY - currentRotationY) * 0.1;
+
+          // Apply 3D transformation
+          watchFace.style.transform = `
+            translateY(${Math.sin(Date.now() * 0.001) * 5}px)
+            rotateX(${currentRotationX}deg)
+            rotateY(${currentRotationY}deg)
+            scale(1.05)
+        `;
+
+          // Add shine effect based on rotation
+          const shine = watchFace.querySelector(".absolute.bg-gradient-to-tr");
+          if (shine) {
+            shine.style.opacity = 0.3 + Math.abs(currentRotationY) * 0.02;
+            shine.style.background = `linear-gradient(${
+              45 + currentRotationY
+            }deg, transparent, rgba(255,255,255,0.3) ${
+              30 + currentRotationX
+            }%, transparent)`;
+          }
+
+          requestAnimationFrame(animateWatchRotation);
+        }
+
+        animateWatchRotation();
+      }
+
+      // Initialize watch when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        animateWatch();
+        setTimeout(addWatchHoverEffect, 1000); // Delay to ensure DOM is ready
+      });
+
+      // Add CSS for better watch appearance
+      const style = document.createElement("style");
+      style.textContent = `
+.watch-face {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 0 60px rgba(212, 175, 55, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(212, 175, 55, 0.2);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.watch-face::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    opacity: 0.5;
+    animation: watchGlow 4s ease-in-out infinite;
+}
+
+@keyframes watchGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+}
+
+.star {
+    width: 3px;
+    height: 3px;
+    background: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive sizing */
+@media (max-width: 640px) {
+    .watch-face {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .watch-face .absolute.inset-16 {
+        inset: 12px;
+    }
+    
+    .hour-hand {
+        height: 50px !important;
+    }
+    
+    .minute-hand {
+        height: 70px !important;
+    }
+    
+    .second-hand {
+        height: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .watch-face {
+        width: 180px;
+        height: 180px;
+    }
+}
+`;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>
