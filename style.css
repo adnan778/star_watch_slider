@@ -258,7 +258,7 @@ body {
 /* Tablet (md) - slightly smaller */
 @media (max-width: 768px) {
   .navigation-dots {
-    right: 8px;
+    right: 10px;
     gap: 10px;
   }
 
